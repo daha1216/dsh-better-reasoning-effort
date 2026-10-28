@@ -61,7 +61,8 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "build:host": "node scripts/build-host.mjs",
-    "build:types": "tsc -p tsconfig.build.json"
+    "build:types": "tsc -p tsconfig.build.json",
+    "tokens:refresh": "node scripts/refresh-tokens.mjs"
   },
   "engines": {
     "node": "^22.19.0 || >=24"
