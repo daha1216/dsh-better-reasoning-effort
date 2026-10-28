@@ -55,12 +55,11 @@
     }
   },
   "scripts": {
-    "build": "npm run build:clean && npm run build:host && npm run build:client && npm run build:types",
+    "build": "npm run build:host && npm run build:client && npm run build:types",
     "build:clean": "node -e \"require('node:fs').rmSync('lib',{recursive:true,force:true})\"",
     "build:client": "node scripts/build-client.mjs",
     "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "prepare": "npm run build",
     "build:host": "node scripts/build-host.mjs",
     "build:types": "tsc -p tsconfig.build.json"
   },
